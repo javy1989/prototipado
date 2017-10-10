@@ -1,0 +1,12 @@
+node_modules
+dist
+.tmp
+bower_components
+test/bower_components
+
+
+.idea/misc.xml
+.idea/modules.xml
+.idea/prototipado.iml
+.idea/workspace.xml
+test/
