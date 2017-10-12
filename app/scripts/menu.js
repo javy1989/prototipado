@@ -37,18 +37,43 @@ var blockInfo = {
   ]
 };
 
+function getStateTitle(state) {
+  for (var i = 0; i < menuItems.length; i++) {
+    if (menuItems[i].state === state) {
+      return menuItems[i].item;
+    }
+  }
+}
+
 function changeState(state) {
-  var appContenContext = {"state": state};
+  var appContenContext = {"state": state, "title": getStateTitle(state)};
   appContent.innerHTML = PriceApp.content(appContenContext);
-  var blocks = document.querySelectorAll("#"+state+' .block');
-  blocks.forEach(function (block, i) {
-    block.innerHTML = PriceApp.block(blockInfo[state][i]);
-  });
+  var stagePage = document.querySelector("#" + state);
+  stagePage.innerHTML = PriceApp[state]();
+
   $(".menuLinks").removeClass("menuActive");
-  $("#"+state+"Link").addClass("menuActive");
+  $("#" + state + "Link").addClass("menuActive");
+  if (state === "exploracionProductos") {
+    var sliders = document.querySelectorAll(".sliders")
+    sliders.forEach(function (slider) {
+      slider.innerHTML = PriceApp.slider();
+      noUiSlider.create(slider.querySelector(".filterSliders"), {
+        start: [10, 50],
+        conect: true,
+        step: 1,
+        range: {
+          'min': 0,
+          'max': 100
+        },
+        format: wNumb({
+          decimals: 0
+        })
+      })
+    });
+  }
 }
 
 changeState("seleccionCompetidores");
-
+$(".button-collapse").sideNav()
 
 

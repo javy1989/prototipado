@@ -10,3 +10,6 @@ test/bower_components
 .idea/prototipado.iml
 .idea/workspace.xml
 test/
+
+app/fonts/
+app/images/

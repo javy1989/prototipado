@@ -3,6 +3,7 @@
 
 @import "block";
 @import "menu";
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -11,10 +12,6 @@
 }
 
 /* Space out content a bit */
-body {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -93,4 +90,35 @@ body {
 
 .mainContent{
   padding-left: 300px;
+  @media screen and (max-width: 992px){
+     padding-left: 0px;
+  }
+}
+
+.page-title{
+  padding-left: 20px;
+  font-size: 24px;
+  @media screen and (max-width: 360px){
+    font-size: 16px;
+  }
+}
+
+.footer-copyright{
+  padding-left: 20px;
+  line-height: 20px !important;
+  margin-bottom: 0px !important;
+  min-height: 60px!important;
+  height: auto !important;
+}
+
+.inputSlider{
+  height: auto!important;
+}
+.filterSliders{
+  .range-label{
+    background-color: grey!important;
+  }
+  .noUi-handle{
+    background-color: grey!important;
+  }
 }

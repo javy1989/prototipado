@@ -1,14 +1,15 @@
-{{#switch state}}
-  {{#case "seleccionCompetidores"}}
+<nav class="grey darken-3 mainContent">
+  <a href="#" data-activates="sideMenu" class="button-collapse top-nal full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+  <div class="page-title">
+    {{title}}
+  </div>
+</nav>
+<div class="row mainContent">
+  <div class="col s12">
     <div id="{{state}}">
-      <div class="block"></div>
-      <div class="block"></div>
     </div>
-  {{/case}}
-  {{#case "exploracionProductos"}}
-    <div id="{{state}}">
-      <div class="block"></div>
-      <div class="block"></div>
-    </div>
-  {{/case}}
-{{/switch}}
+  </div>
+</div>
+
