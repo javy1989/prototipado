@@ -70,6 +70,13 @@ function changeState(state) {
         })
       })
     });
+  } else if (state === "seleccionCompetidores") {
+    var competidorInfo = document.querySelector("#competidorInfo")
+    var compInfo=[
+      {"name":"Amazon","url":"https://www.amazon.com","upValues":10,"downValues":5},
+      {"name":"Ebay","url":"https://www.ebay.com","upValues":10,"downValues":5}
+    ];
+    competidorInfo.innerHTML=PriceApp.competidorInfo({competitors:compInfo})
   }
 }
 
