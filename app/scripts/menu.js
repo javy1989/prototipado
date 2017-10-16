@@ -70,6 +70,14 @@ function changeState(state) {
         })
       })
     });
+    var tableProductsInfo=document.querySelector("#productsTable");
+    var productsInfo=[
+      {"name":"Producto 1","price":152,"competitor1":65,"competitor2":46,"inventory":5},
+      {"name":"Producto 2","price":152,"competitor1":3,"competitor2":31,"inventory":5},
+      {"name":"Producto 3","price":152,"competitor1":45,"competitor2":64,"inventory":5}
+    ];
+    tableProductsInfo.innerHTML=PriceApp.tableProducts({products:productsInfo})
+
   } else if (state === "seleccionCompetidores") {
     var competidorInfo = document.querySelector("#competidorInfo")
     var compInfo=[

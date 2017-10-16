@@ -1,26 +1,22 @@
 {{#each competitors}}
-  <div class="col s6">
+  <div class="col s12 m12 l6">
     <div class="row">
       <div class="col s6">
-        <br/>
+        <p></p>
         <h6 class="competitorTitle"><b>{{name}}</b></h6>
-        {{url}}
+        <span class="truncate">{{url}}</span>
       </div>
       <div class="col s6">
         <h6><b>Comparación Productos</b></h6>
         <div class="row">
-          <div class="col s6">
-        <span class="competitorKPI">
-           {{upValues}}
-          <i class="material-icons">arrow_upward</i>
-        </span>
-          </div>
-          <div class="col s6">
-        <span class="competitorKPI grey-text">
-        {{downValues}}
-          <i class="material-icons">arrow_downward</i>
-        </span>
-          </div>
+          <span class="competitorKPI">
+             {{upValues}}
+            <i class="material-icons">arrow_upward</i>
+          </span>
+          <span class="competitorKPI grey-text">
+              {{downValues}}
+            <i class="material-icons">arrow_downward</i>
+          </span>
         </div>
       </div>
     </div>
